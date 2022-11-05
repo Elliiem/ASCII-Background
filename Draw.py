@@ -30,24 +30,32 @@ def DrawVert(Row1,Row2,Line):
     LineList[Row2 - 1][Line] = "#"
 
 
-DrawHor(2,852,139)
+def ClearLine(Row):
+    for x in range(0,len(LineList[Row-1])):
+        LineList[Row-1][x] = " "
+
+def ClearVert(Pos):
+    Pos = int(Pos/2-1)
+    for x in range(0,len(LineList)):
+        LineList[x][Pos] = " "
+
+def Save():
+ for x in range(0,len(LineList)):
+  Out.write("<")
+  for y in range(0,len(LineList[x])):
+    Out.write(LineList[x][y])
+    Out.write("<")
+  if x != len(LineList)-1:
+   Out.write("\n")
 
 
 
 
 
-for x in range(0,len(LineList)):
- Out.write("<")
- for y in range(0,len(LineList[x])):
-   Out.write(LineList[x][y])
-   Out.write("<")
- if x != len(LineList)-1:
-  Out.write("\n")
+DrawHor(40,50,30)
 
 
 
 
 
-
-
-
+Save()
