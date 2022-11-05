@@ -19,8 +19,6 @@ def DrawHor(Pos1,Pos2,Row):
     Line[Pos1] = "#"
     Line[Pos2] = "#"
 
-
-
 def DrawVert(Row1,Row2,Line):
     Line = int(Line/2-1)
     len = int(Row2-Row1)
@@ -28,7 +26,6 @@ def DrawVert(Row1,Row2,Line):
         LineList[x][Line] = "|"
     LineList[Row1-1][Line] = "#"
     LineList[Row2 - 1][Line] = "#"
-
 
 def ClearLine(Row):
     for x in range(0,len(LineList[Row-1])):
@@ -38,7 +35,6 @@ def ClearVert(Pos):
     Pos = int(Pos/2-1)
     for x in range(0,len(LineList)):
         LineList[x][Pos] = " "
-
 def Save():
  for x in range(0,len(LineList)):
   Out.write("<")
@@ -48,11 +44,6 @@ def Save():
   if x != len(LineList)-1:
    Out.write("\n")
 
-
-
-
-
-DrawHor(40,50,30)
 
 
 
