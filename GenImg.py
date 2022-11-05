@@ -1,5 +1,4 @@
 from PIL import Image, ImageDraw
-exec(open("./Draw.py").read())
 Resolution = (2560,1440)
 Canvas = open("Canvas.txt","r")
 Img = Image.new("RGB",(Resolution), color=(50,50,50))
