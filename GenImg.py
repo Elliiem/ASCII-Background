@@ -18,5 +18,5 @@ for line in Canvas:
 
 for x in range(0,pixelheight):
   for y in range(0,pixelwidth):
-    d.text((y*6,x*10),LineList[x][y], fill=(120,120,120))
+    d.text((y*6,x*10),LineList[x][y], fill=(50,200,255))
 Img.save("*Out.png")

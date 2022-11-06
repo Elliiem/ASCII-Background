@@ -44,9 +44,18 @@ def Save():
   if x != len(LineList)-1:
    Out.write("\n")
 
-
-
-
+def Clearspes(Pos1, Pos2, Line, Mode):
+    if Mode == "v":
+        for x in range(0, Pos2-Pos1+1):
+            print(x+Pos1, Line)
+            LineList[(x+Pos1)-1][int(Line/2-1)] = " "
+    elif Mode == "h":
+        for x in range(0,Pos2-Pos1+1):
+            LineList[int(Line)-1][int((x+Pos1)/2-1)] = " "
+    else:
+     print("Hurenkinf")
+DrawHor(786,852,40)
+DrawVert(20,40,786)
 
 
 Save()
